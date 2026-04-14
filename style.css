@@ -324,3 +324,68 @@ a{
   border-radius:12px;
   border:1px solid var(--border);
 }
+
+/* ===================== HIGHLIGHTED WORK ===================== */
+
+.highlight-grid{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr); /* 2 columns looks cleaner for papers */
+  gap:20px;
+}
+
+.highlight-item{
+  display:flex;
+  flex-direction:column;
+}
+
+/* preserve aspect ratio */
+.highlight-item img{
+  width:100%;
+  height:auto;                 /* 🔥 no distortion */
+  border-radius:10px;
+  border:1px solid var(--border);
+  margin-bottom:8px;
+}
+
+/* improve spacing hierarchy */
+.highlight-item h3{
+  margin-top:6px;
+}
+
+.highlight-item p{
+  margin:4px 0 6px;
+}
+
+/* responsive */
+@media (max-width:700px){
+  .highlight-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+.explore-more {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.explore-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #2c3e50;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.explore-btn:hover {
+  background-color: #1a252f;
+  transform: translateY(-2px);
+}
+
+.icon {
+  font-size: 18px;
+}
