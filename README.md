@@ -1,2 +1,0 @@
-# pravacosmology.github.io
-Website
