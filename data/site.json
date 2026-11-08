@@ -1,0 +1,442 @@
+{
+ "settings": {
+  "group_name": "Cosmology & Statistical Physics Group",
+  "brand_title": "Cosmology & Statistical Physics",
+  "institute": "Indian Institute of Astrophysics",
+  "city": "Bengaluru, India",
+  "address": "Indian Institute of Astrophysics, II Block, Koramangala, Bengaluru 560034, India",
+  "map_url": "https://www.google.com/maps/search/?api=1&query=Indian+Institute+of+Astrophysics+Koramangala+Bengaluru",
+  "email": "prava@iiap.res.in",
+  "group_email": "prava.cosmology.iia@gmail.com",
+  "tagline": "Cosmic Microwave Background • Large Scale Structure • Statistical Inference",
+  "hero_headline": "Mapping the *cosmos* through data, statistics, and fundamental physics.",
+  "hero_caption": "Illustrative Gaussian random field on a sphere, drawn with a CMB-style palette. Drag to rotate. Not real data.",
+  "about_eyebrow": "About the group",
+  "about_title": "Understanding the Universe through its *statistics*",
+  "about": [
+   "At the Indian Institute of Astrophysics, our Cosmology & Statistical Physics Group focuses on understanding the Universe through a combination of cosmology, statistical physics, and data-driven methodologies. Our research centers on extracting physical information from complex observational datasets, including the Cosmic Microwave Background, large-scale structure, and multiwavelength observations of galaxies.",
+   "We develop and apply advanced statistical and computational tools—such as Minkowski Functionals, topological descriptors, and information-theoretic measures—to quantify structure, morphology, and complexity in cosmological fields. By integrating theoretical modeling, numerical simulations, and data analysis, we investigate key physical processes such as gravitational evolution, redshift-space distortions, and signatures of early-universe physics, including inflation and neutrino effects.",
+   "Our goal is to uncover robust statistical signatures and fundamental principles that govern the formation and evolution of structure in the Universe."
+  ],
+  "method_tags": [
+   "Minkowski Functionals",
+   "Betti numbers",
+   "Minkowski Tensors",
+   "Topological descriptors",
+   "Information-theoretic measures",
+   "Ordinal patterns",
+   "Bayesian inference & MCMC",
+   "N-body & semi-numerical simulations"
+  ],
+  "join_title": "Curious about our work? Let's talk.",
+  "join_text": "We are always happy to hear from students, postdocs and collaborators who share our interest in extracting physics from the sky. Get in touch to discuss projects, visits and collaborations.",
+  "calendar_embed": "https://calendar.google.com/calendar/embed?src=prava.cosmology.iia%40gmail.com&ctz=Asia%2FKolkata",
+  "calendar_note": "Weekly: Monday and Saturday mornings are busy.",
+  "lead_member": "pravabati-chingangbam",
+  "social": [
+   {
+    "label": "INSPIRE (group lead)",
+    "url": "https://inspirehep.net/authors/1046872?ui-citation-summary=true"
+   }
+  ],
+  "default_theme": "dark"
+ },
+ "research_areas": [
+  {
+   "id": "cmb",
+   "icon": "cmb",
+   "title": "Cosmic Microwave Background",
+   "summary": "Testing the statistics of CMB temperature, polarization and lensing maps, and of Galactic foregrounds, for departures from Gaussianity and statistical isotropy that could point to new early-universe physics.",
+   "tags": [
+    "Non-Gaussianity",
+    "Statistical isotropy",
+    "Foregrounds",
+    "Lensing"
+   ]
+  },
+  {
+   "id": "lss",
+   "icon": "lss",
+   "title": "Large-Scale Structure & Morphology",
+   "summary": "Using Minkowski Functionals, Betti numbers and Minkowski Tensors to read gravitational evolution, redshift-space distortions and massive-neutrino signatures from the excursion sets of cosmological fields.",
+   "tags": [
+    "Minkowski Tensors",
+    "Quijote",
+    "Redshift space",
+    "Neutrinos"
+   ]
+  },
+  {
+   "id": "21cm",
+   "icon": "21cm",
+   "title": "21 cm & Primordial Features",
+   "summary": "Probing inflationary features and the physics of cosmic dawn and the Epoch of Reionization through the morphology of the redshifted 21 cm signal.",
+   "tags": [
+    "21 cm",
+    "Reionization",
+    "Inflation",
+    "Primordial features"
+   ]
+  },
+  {
+   "id": "dipole",
+   "icon": "dipole",
+   "title": "Cosmic Dipole & the Cosmological Principle",
+   "summary": "Careful, simulation-based reassessment of the Ellis-Baldwin test and other probes of whether the Universe is statistically homogeneous and isotropic on large scales.",
+   "tags": [
+    "CatWISE2020",
+    "Quasars",
+    "FLASK",
+    "Cosmological principle"
+   ]
+  },
+  {
+   "id": "complexity",
+   "icon": "entropy",
+   "title": "Complexity & Information Theory",
+   "summary": "Quantifying structure and stochasticity in cosmological and galactic fields with ordinal patterns, permutation entropy and statistical complexity.",
+   "tags": [
+    "Ordinal patterns",
+    "Entropy",
+    "Complexity",
+    "Galaxies"
+   ]
+  },
+  {
+   "id": "theory",
+   "icon": "theory",
+   "title": "Theoretical Cosmology",
+   "summary": "Inflationary particle production, dark-energy models and non-extensive entropies, confronted with data through Bayesian analysis.",
+   "tags": [
+    "Inflation",
+    "Dark energy",
+    "Entropy",
+    "Bayesian analysis"
+   ]
+  }
+ ],
+ "members": [
+  {
+   "id": "pravabati-chingangbam",
+   "name": "Pravabati Chingangbam",
+   "role": "pi",
+   "title": "Professor",
+   "photo": "images/team/Prava.jpeg",
+   "email": "prava@iiap.res.in",
+   "research": "CMB, Statistical Inference",
+   "degree": "",
+   "tags": [
+    "CMB",
+    "Statistics"
+   ],
+   "bio": "Leads the group at the Indian Institute of Astrophysics. Her work develops the morphology of random fields, Minkowski Functionals and Tensors, as tools to test the statistics of the CMB, large-scale structure and the 21 cm signal.",
+   "inspire": "1046872",
+   "links": [
+    {
+     "label": "IIA profile",
+     "url": "https://www.iiap.res.in/people/profile/academic/pravabati-chingangbam/"
+    },
+    {
+     "label": "ORCID",
+     "url": "https://orcid.org/0000-0002-7385-8273"
+    }
+   ],
+   "pub_names": []
+  },
+  {
+   "id": "kanan-virkar",
+   "name": "Kanan Vijay Virkar",
+   "role": "phd",
+   "title": "Doctoral Student",
+   "photo": "images/team/kanan.jpg",
+   "email": "kanan.virkar@iiap.res.in",
+   "research": "21 cm Cosmology",
+   "degree": "",
+   "tags": [
+    "Primordial Features"
+   ],
+   "bio": "",
+   "inspire": "2529207",
+   "links": [],
+   "pub_names": [
+    "Kanan Virkar"
+   ]
+  },
+  {
+   "id": "masroor-bashir",
+   "name": "Masroor Bashir",
+   "role": "phd",
+   "title": "Doctoral Student",
+   "photo": "images/team/images.jpeg",
+   "email": "masroor.bashir@iiap.res.in",
+   "research": "Cosmic Dipole Anomaly",
+   "degree": "",
+   "tags": [
+    "Morphological Statistics"
+   ],
+   "bio": "",
+   "inspire": "2458858",
+   "links": [],
+   "pub_names": []
+  },
+  {
+   "id": "saurabh",
+   "name": "Saurabh",
+   "role": "phd",
+   "title": "Doctoral Student",
+   "photo": "images/team/saurabh.jpg",
+   "email": "",
+   "research": "",
+   "degree": "",
+   "tags": [],
+   "bio": "",
+   "inspire": "",
+   "links": [],
+   "pub_names": []
+  },
+  {
+   "id": "sandeep-kumar-acharya",
+   "name": "Sandeep Kumar Acharya",
+   "role": "postdoc",
+   "title": "Postdoctoral Researcher",
+   "photo": "images/team/images.jpeg",
+   "email": "sandeep.acharya@iiap.res.in",
+   "research": "Mass Function",
+   "degree": "TIFR, Dept. of Theor. Physics (2020)",
+   "tags": [
+    "Luminosity Function Observables"
+   ],
+   "bio": "",
+   "inspire": "1863256",
+   "links": [],
+   "pub_names": []
+  },
+  {
+   "id": "manosh-manoharan",
+   "name": "Manosh T. Manoharan",
+   "role": "postdoc",
+   "title": "Postdoctoral Researcher",
+   "photo": "images/team/manu.jpeg",
+   "email": "manosh.tm@iiap.res.in",
+   "research": "Dark Energy Models, Non-extensive entropies",
+   "degree": "CUSAT, Dept. of Physics (2025)",
+   "tags": [
+    "Entropy",
+    "Bayesian Analysis",
+    "MCMC"
+   ],
+   "bio": "",
+   "inspire": "",
+   "links": [
+    {
+     "label": "Website",
+     "url": "https://manoshmanoharan.github.io"
+    },
+    {
+     "label": "Google Scholar",
+     "url": "https://scholar.google.com/citations?user=QZtGUvwAAAAJ&hl=en"
+    },
+    {
+     "label": "ORCID",
+     "url": "https://orcid.org/0000-0001-8455-6951"
+    },
+    {
+     "label": "ADS",
+     "url": "https://ui.adsabs.harvard.edu/search/p_=0&q=-docs(6997cd3a5b6c909c6d7c333820d088f4)%20author%3A%22Manoharan%2C%20Manosh%20T.%22&sort=date%20desc%2C%20bibcode%20desc/metrics"
+    }
+   ],
+   "pub_names": []
+  }
+ ],
+ "alumni": [
+  {
+   "id": "fazlu-rahman",
+   "name": "Fazlu Rahman",
+   "category": "phd",
+   "thesis": "Investigations of statistical properties of galactic foreground components and the CMB",
+   "year": "2024",
+   "now_at": "Postdoc in Cosmology at Texas A&M University",
+   "research": "",
+   "photo": "images/past_members/fazlu.jpeg",
+   "tags": [],
+   "bio": "",
+   "inspire": "1884878",
+   "links": [
+    {
+     "label": "Thesis",
+     "url": "https://library.iiap.res.in/cgi-bin/koha/opac-detail.pl?biblionumber=36038"
+    }
+   ],
+   "pub_names": []
+  }
+ ],
+ "highlights": [
+  {
+   "id": "2604-08409",
+   "title": "Morphological complexity of NGC 628 - a multiwavelength multiscale analysis using the ordinal pattern framework",
+   "summary": "As statistical systems, galaxies exhibit a rich interplay between organized structure and stochastic fluctuations across a broad range of spatial scales. This duality motivates the need for quantitative frameworks capable of capturing their morphological complexity. The ordinal patterns framework, along with its associated statistical measures: permutation entropy (H), disequilibrium (DE), statistical complexity (C), and ordinal network node entropy, has recently emerged as a powerful tool for analyzing such complexity in physical systems. We apply this framework in a multiwavelength, multiscale analysis of the galaxy NGC 628, utilizing observations in the near-ultraviolet, near-infrared, mid-infrared, and millimeter bands. Our results reveal a characteristic spatial scale of approximately 200 parsecs, marking the transition from small-scale structures influenced by star formation and stellar feedback to larger-scale morphology governed by the galaxy's dynamics. Furthermore, we find that the C vs. H trajectories for all wavelengths converge toward a common attractor curve, consistent with the behavior of isotropic Gaussian random fields. This convergence suggests a universal statistical behavior in galactic structure at large scales, despite the differing physical processes traced by each wavelength.",
+   "arxiv": "2604.08409",
+   "image": "images/research/2604_08409.png",
+   "date": "2026-04",
+   "featured": true,
+   "authors": "",
+   "links": [],
+   "journal": ""
+  },
+  {
+   "id": "2603-19734",
+   "title": "Morphological Signatures of Gravitational Evolution, Redshift-Space Distortions, and Massive Neutrinos in Large-Scale Structure",
+   "summary": "We investigate the morphological properties of large-scale structure in the Universe and the physical processes that modify the excursion-set morphology of the three-dimensional matter density field. Using the Quijote N-body simulation suite, we study how an initially Gaussian random matter density field is altered by non-linear gravitational evolution, redshift-space distortions, and massive neutrino free-streaming. To quantify these effects, we employ a comprehensive set of morphological descriptors, including Minkowski Functionals, Betti numbers, Minkowski Tensors, and local measures of the size and shape of connected components and cavities. We find that gravitational evolution, on quasi-linear scales RG∼10h−1Mpc, strongly skews the one-point distribution and slightly smooths the field via the merging of critical points, with a more pronounced effect for minima and wall saddle points than for peaks. Redshift-space distortions produce the strongest morphological signal, generating pronounced anisotropies that are robustly captured by Minkowski Tensors and local shape measures, arising from both coherent large-scale flows and non-linear Finger-of-God effects. In contrast, massive neutrinos induce an approximately isotropic suppression of small-scale structure, slightly reducing the amplitudes of the Minkowski Functionals while leaving individual shape measures largely unchanged. We further explore the sensitivity of these statistics to variations in cosmological parameters Ωm, ns, and σ8, finding that they probe strongly degenerate combinations of Ωm and ns, while also exhibiting sensitivity to σ8 through the non-Gaussianity of the evolved density field.",
+   "arxiv": "2603.19734",
+   "image": "images/research/2603_19734.png",
+   "date": "2026-03",
+   "featured": true,
+   "authors": "",
+   "links": [],
+   "journal": ""
+  },
+  {
+   "id": "2601-19450",
+   "title": "Minkowski Functionals of the 21 cm Signal as a Probe of Primordial Features",
+   "summary": "The redshifted 21 cm signal from the cosmic dawn and Epoch of Reionization (EoR) encodes important information about both astrophysical processes and primordial physics, such as inflation. In this work, we use morphological statistics to explore the sensitivity of the 21 cm signal to inflationary features and EoR dynamics simultaneously. Focusing on primordial features from particle production during inflation we generate semi-numerical simulations of the 21 cm signal across redshifts 5 < z < 35, incorporating these features. Using Minkowski Functionals (MFs), we analyze the morphology of 21 cm fields: density, neutral hydrogen fraction, spin temperature, and brightness temperature. We demonstrate that MFs are highly sensitive to both the amplitude and scale of primordial features, capturing rich morphological information. In particular, we show that MFs can robustly identify inflationary features and distinguish them from the standard model. We further explore various EoR scenarios, and demonstrate that combining MFs across redshifts can disentangle the signatures of primordial features from EoR effects. This approach opens new avenues for probing inflation with upcoming 21 cm surveys.",
+   "arxiv": "2601.19450",
+   "image": "images/research/2601_19450.png",
+   "date": "2026-01",
+   "featured": true,
+   "authors": "",
+   "links": [],
+   "journal": ""
+  },
+  {
+   "id": "2511-00822",
+   "title": "The CatWISE2020 Quasar dipole: A Reassessment of the Cosmic Dipole Anomaly",
+   "summary": "The cosmological principle, which asserts a statistically homogeneous and isotropic universe on large scales, is a foundational assumption of the standard cosmological model. A critical test of this principle involves the kinematic interpretation of the Cosmic Microwave Background temperature dipole, conventionally attributed to our peculiar motion relative to the cosmic rest frame. The Ellis-Baldwin test provides a probe of this kinematic interpretation by searching for a matching Doppler-driven dipole in the number counts of extragalactic radio sources. Recent measurements from the CatWISE2020 quasar catalog have reported a dipole amplitude significantly exceeding the kinematic expectation, with a claimed significance of 4.9σ. We present a comprehensive reassessment of this test using the same dataset, incorporating major sources of uncertainty in the statistical inference. We use a simulation framework based on the FLASK package, incorporating lognormal realizations of the large-scale structure, the quasar clustering bias, the survey's radial selection function, and its exact sky coverage. Our simulations account for the kinematic dipole, the intrinsic clustering dipole, shot noise, and survey geometry effects. The analysis yields a revised significance of the kinematic dipole excess of 3.63σ in the absence of a clustering dipole, and 3.44σ in the presence of a randomly oriented clustering dipole. When the clustering dipole is aligned with the kinematic dipole direction, the significance decreases further to 3.27σ. Our analysis demonstrates that although the anomaly is reduced in significance, it cannot be explained solely as a result of the clustering dipole or mode coupling arising from the survey mask.",
+   "arxiv": "2511.00822",
+   "image": "images/research/2511_00822.png",
+   "date": "2025-11",
+   "featured": true,
+   "authors": "",
+   "links": [],
+   "journal": ""
+  }
+ ],
+ "news": [
+  {
+   "id": "n-aot",
+   "date": "2026-03-22",
+   "kind": "Event",
+   "title": "Astronomy on Tap Bengaluru",
+   "text": "Prava was featured at the Astronomy on Tap Bengaluru evening at The Green Door Coffee House, Infantry Road. See the photos in the [gallery](gallery.html).",
+   "link": "gallery.html",
+   "link_label": "Gallery"
+  },
+  {
+   "id": "n-2604",
+   "date": "2026-04",
+   "kind": "Preprint",
+   "title": "Morphological complexity of NGC 628",
+   "text": "A multiwavelength, multiscale analysis of NGC 628 with the ordinal pattern framework finds a characteristic scale of about 200 parsecs.",
+   "link": "https://arxiv.org/abs/2604.08409",
+   "link_label": "arXiv:2604.08409"
+  },
+  {
+   "id": "n-2603",
+   "date": "2026-03",
+   "kind": "Preprint",
+   "title": "Morphological signatures in large-scale structure",
+   "text": "New preprint on the effects of gravitational evolution, redshift-space distortions and massive neutrinos on the morphology of the matter field, using the Quijote simulations.",
+   "link": "https://arxiv.org/abs/2603.19734",
+   "link_label": "arXiv:2603.19734"
+  },
+  {
+   "id": "n-2601",
+   "date": "2026-01",
+   "kind": "Preprint",
+   "title": "Minkowski Functionals of the 21 cm signal",
+   "text": "New preprint on using Minkowski Functionals of the 21 cm signal to probe primordial features from inflation.",
+   "link": "https://arxiv.org/abs/2601.19450",
+   "link_label": "arXiv:2601.19450"
+  },
+  {
+   "id": "n-2511",
+   "date": "2025-11",
+   "kind": "Preprint",
+   "title": "The CatWISE2020 quasar dipole, reassessed",
+   "text": "A simulation-based reassessment reduces the significance of the claimed cosmic dipole anomaly to about 3.3 to 3.6 sigma.",
+   "link": "https://arxiv.org/abs/2511.00822",
+   "link_label": "arXiv:2511.00822"
+  }
+ ],
+ "awards": [],
+ "albums": [
+  {
+   "id": "astronomy-on-tap-2026",
+   "title": "Astronomy on Tap Bengaluru",
+   "date": "2026-03-22",
+   "description": "Astronomy on Tap Bengaluru evening, featuring Prava. 22 March 2026, 5:00 PM, The Green Door Coffee House (Infantry Rd, close to Cubbon Metro).",
+   "photos": [
+    {
+     "image": "images/gallery/1.jpeg",
+     "caption": ""
+    },
+    {
+     "image": "images/gallery/2.jpeg",
+     "caption": ""
+    },
+    {
+     "image": "images/gallery/3.jpeg",
+     "caption": ""
+    }
+   ]
+  }
+ ],
+ "collaborations": [],
+ "resources": {
+  "books": [
+   {
+    "title": "The Feynman Lectures on Physics",
+    "url": "https://www.feynmanlectures.caltech.edu/",
+    "note": "free online"
+   }
+  ],
+  "online": [
+   {
+    "title": "arXiv.org",
+    "url": "https://arxiv.org/",
+    "note": "preprints"
+   },
+   {
+    "title": "NASA/IPAC Extragalactic Database",
+    "url": "https://ned.ipac.caltech.edu/",
+    "note": "NED"
+   },
+   {
+    "title": "NASA LAMBDA",
+    "url": "https://lambda.gsfc.nasa.gov/",
+    "note": "CMB data"
+   }
+  ]
+ },
+ "lectures": [
+  {
+   "id": "rass-1",
+   "title": "Background Cosmology, Session 1",
+   "note": "Pravabati Chingangbam · RASS 2025",
+   "url": "https://www.youtube.com/watch?v=p0In5tS3Fas&t=3s"
+  },
+  {
+   "id": "rass-2",
+   "title": "Background Cosmology, Session 2",
+   "note": "Pravabati Chingangbam · RASS 2025",
+   "url": "https://www.youtube.com/watch?v=dMot93c3xj0"
+  },
+  {
+   "id": "rass-3",
+   "title": "Background Cosmology, Session 3",
+   "note": "Pravabati Chingangbam · RASS 2025",
+   "url": "https://www.youtube.com/watch?v=YHkRsamPfMg"
+  }
+ ],
+ "publications_hidden": [],
+ "publications_manual": []
+}

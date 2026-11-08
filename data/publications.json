@@ -1,0 +1,1058 @@
+{
+ "fetched_at": null,
+ "source_note": "Seeded from the previous research.html. Run: python manage.py  ->  P (refresh from INSPIRE).",
+ "sources": [
+  {
+   "label": "Pravabati Chingangbam",
+   "recid": "1046872"
+  }
+ ],
+ "papers": [
+  {
+   "id": "2603.19734",
+   "authors": [
+    "Priya Goyal",
+    "Stephen Appleby",
+    "Pravabati Chingangbam",
+    "Changbom Park"
+   ],
+   "author_count": 4,
+   "title": "Morphological Signatures of Gravitational Evolution, Redshift-Space Distortions, and Massive Neutrinos in Large-Scale Structure",
+   "journal": "",
+   "year": "2026",
+   "date": "2026-03",
+   "arxiv": "2603.19734",
+   "doi": "",
+   "citations": null,
+   "type": "preprint",
+   "inspire_url": ""
+  },
+  {
+   "id": "2601.19450",
+   "authors": [
+    "Kanan Virkar",
+    "Suvedha Suresh Naik",
+    "Pravabati Chingangbam"
+   ],
+   "author_count": 3,
+   "title": "Minkowski Functionals of the 21 cm Signal as a Probe of Primordial Features",
+   "journal": "",
+   "year": "2026",
+   "date": "2026-01",
+   "arxiv": "2601.19450",
+   "doi": "",
+   "citations": null,
+   "type": "preprint",
+   "inspire_url": ""
+  },
+  {
+   "id": "2511.00822",
+   "authors": [
+    "Masroor Bashir",
+    "Pravabati Chingangbam",
+    "Stephen Appleby"
+   ],
+   "author_count": 3,
+   "title": "The CatWISE2020 Quasar dipole: A Reassessment of the Cosmic Dipole Anomaly",
+   "journal": "",
+   "year": "2025",
+   "date": "2025-11",
+   "arxiv": "2511.00822",
+   "doi": "",
+   "citations": null,
+   "type": "preprint",
+   "inspire_url": ""
+  },
+  {
+   "id": "2507.10091",
+   "authors": [
+    "Stephen Appleby",
+    "Christophe Pichon",
+    "Pravabati Chingangbam",
+    "Dmitri Pogosyan",
+    "Changbom Park"
+   ],
+   "author_count": 5,
+   "title": "Non-Gaussian Expansion of Minkowski Tensors in Redshift Space",
+   "journal": "",
+   "year": "2025",
+   "date": "2025-07",
+   "arxiv": "2507.10091",
+   "doi": "",
+   "citations": null,
+   "type": "preprint",
+   "inspire_url": ""
+  },
+  {
+   "id": "2507.06255",
+   "authors": [
+    "Pravabati Chingangbam"
+   ],
+   "author_count": 1,
+   "title": "On the statistical nature of Betti numbers and Euler characteristic of smooth random fields",
+   "journal": "",
+   "year": "2025",
+   "date": "2025-07",
+   "arxiv": "2507.06255",
+   "doi": "",
+   "citations": null,
+   "type": "preprint",
+   "inspire_url": ""
+  },
+  {
+   "id": "2503.17849",
+   "authors": [
+    "Masroor Bashir",
+    "Nidharssan S",
+    "Pravabati Chingangbam",
+    "Fazlu Rahman",
+    "Priya Goyal",
+    "Stephen Appleby",
+    "Changbom Park"
+   ],
+   "author_count": 7,
+   "title": "Local patch analysis of ACT DR6 convergence map using morphological statistics",
+   "journal": "",
+   "year": "2025",
+   "date": "2025-03",
+   "arxiv": "2503.17849",
+   "doi": "",
+   "citations": null,
+   "type": "preprint",
+   "inspire_url": ""
+  },
+  {
+   "id": "2501.02538",
+   "authors": [
+    "Suvedha Suresh Naik",
+    "Pravabati Chingangbam",
+    "Saurabh Singh",
+    "Andrei Mesinger",
+    "Kazuyuki Furuuchi"
+   ],
+   "author_count": 5,
+   "title": "Global 21 cm signal: a promising probe of primordial features",
+   "journal": "JCAP",
+   "year": "2025",
+   "date": "2025-01",
+   "arxiv": "2501.02538",
+   "doi": "10.1088/1475-7516/2025/05/038",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "2311.12571",
+   "authors": [
+    "Pravabati Chingangbam",
+    "Fazlu Rahman"
+   ],
+   "author_count": 2,
+   "title": "Minkowski functionals for composite smooth random fields",
+   "journal": "Phys.Rev.D",
+   "year": "2024",
+   "date": "2023-11",
+   "arxiv": "2311.12571",
+   "doi": "10.1103/PhysRevD.109.083530",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "2212.14064",
+   "authors": [
+    "Suvedha Suresh Naik",
+    "Pravabati Chingangbam",
+    "Kazuyuki Furuuchi"
+   ],
+   "author_count": 3,
+   "title": "Particle production during inflation: constraints expected from redshifted 21 cm observations from the epoch of reionization",
+   "journal": "JCAP",
+   "year": "2023",
+   "date": "2022-12",
+   "arxiv": "2212.14064",
+   "doi": "10.1088/1475-7516/2023/04/058",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "2212.06076",
+   "authors": [
+    "Fazlu Rahman",
+    "Pravabati Chingangbam",
+    "Tuhin Ghosh"
+   ],
+   "author_count": 3,
+   "title": "Statistical properties of galactic synchrotron temperature and polarization maps — a multi-frequency comparison",
+   "journal": "JCAP",
+   "year": "2024",
+   "date": "2022-12",
+   "arxiv": "2212.06076",
+   "doi": "10.1088/1475-7516/2024/01/036",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "2208.10164",
+   "authors": [
+    "Stephen Appleby",
+    "Joby P. Kochappan",
+    "Pravabati Chingangbam",
+    "Changbom Park"
+   ],
+   "author_count": 4,
+   "title": "Minkowski Tensors in Redshift Space -- Beyond the Plane Parallel Approximation",
+   "journal": "",
+   "year": "2022",
+   "date": "2022-08",
+   "arxiv": "2208.10164",
+   "doi": "10.3847/1538-4357/aca530",
+   "citations": null,
+   "type": "preprint",
+   "inspire_url": ""
+  },
+  {
+   "id": "2207.05765",
+   "authors": [
+    "Pavan Kumar Aluri",
+    "Paolo Cea",
+    "Pravabati Chingangbam",
+    "Ming-Chung Chu",
+    "Roger G. Clowes",
+    "Damien Hutsemékers",
+    "Joby P. Kochappan",
+    "Alexia M. Lopez",
+    "Lang Liu",
+    "Niels C.M. Martens",
+    "C.J.A.P. Martins",
+    "Konstantinos Migkas",
+    "Eoin Ó. Colgáin",
+    "Pratyush Pranav",
+    "Lior Shamir",
+    "Ashok K. Singal",
+    "M.M. Sheikh-Jabbari",
+    "Jenny Wagner",
+    "Shao-Jiang Wang",
+    "David L. Wiltshire",
+    "Shek Yeung",
+    "Lu Yin",
+    "Wen Zhao"
+   ],
+   "author_count": 23,
+   "title": "Is the observable Universe consistent with the cosmological principle?",
+   "journal": "Class.Quant.Grav.",
+   "year": "2023",
+   "date": "2022-07",
+   "arxiv": "2207.05765",
+   "doi": "10.1088/1361-6382/acbefc",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "2202.05862",
+   "authors": [
+    "Suvedha Suresh Naik",
+    "Kazuyuki Furuuchi",
+    "Pravabati Chingangbam"
+   ],
+   "author_count": 3,
+   "title": "Particle production during inflation: a Bayesian analysis with CMB data from Planck 2018",
+   "journal": "JCAP",
+   "year": "2022",
+   "date": "2022-02",
+   "arxiv": "2202.05862",
+   "doi": "10.1088/1475-7516/2022/07/016",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "2109.05726",
+   "authors": [
+    "Pravabati Chingangbam",
+    "Priya Goyal",
+    "K.P. Yogendran",
+    "Stephen Appleby"
+   ],
+   "author_count": 4,
+   "title": "Geometrical meaning of statistical isotropy of smooth random fields in two dimensions",
+   "journal": "Phys.Rev.D",
+   "year": "2021",
+   "date": "2021-09",
+   "arxiv": "2109.05726",
+   "doi": "10.1103/PhysRevD.104.123516",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "2106.05757",
+   "authors": [
+    "Joby P. Kochappan",
+    "Aparajita Sen",
+    "Tuhin Ghosh",
+    "Pravabati Chingangbam",
+    "Soumen Basak"
+   ],
+   "author_count": 5,
+   "title": "Application of Contour Minkowski Tensor and $\\mathcal{D}$ Statistic to the Planck $E$-mode data",
+   "journal": "",
+   "year": "2021",
+   "date": "2021-06",
+   "arxiv": "2106.05757",
+   "doi": "10.1103/PhysRevD.103.123523",
+   "citations": null,
+   "type": "preprint",
+   "inspire_url": ""
+  },
+  {
+   "id": "2104.00418",
+   "authors": [
+    "Priya Goyal",
+    "Pravabati Chingangbam"
+   ],
+   "author_count": 2,
+   "title": "Local patch analysis for testing statistical isotropy of the Planck convergence map",
+   "journal": "JCAP",
+   "year": "2021",
+   "date": "2021-04",
+   "arxiv": "2104.00418",
+   "doi": "10.1088/1475-7516/2021/08/006",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "2104.00419",
+   "authors": [
+    "Fazlu Rahman",
+    "Pravabati Chingangbam",
+    "Tuhin Ghosh"
+   ],
+   "author_count": 3,
+   "title": "The nature of non-Gaussianity and statistical isotropy of the 408 MHz Haslam synchrotron map",
+   "journal": "JCAP",
+   "year": "2021",
+   "date": "2021-04",
+   "arxiv": "2104.00419",
+   "doi": "10.1088/1475-7516/2021/07/026",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "2101.03962",
+   "authors": [
+    "Akanksha Kapahtia",
+    "Pravabati Chingangbam",
+    "Raghunath Ghara",
+    "Stephen Appleby",
+    "Tirthankar Roy Choudhury"
+   ],
+   "author_count": 5,
+   "title": "Prospects of constraining reionization model parameters using Minkowski tensors and Betti numbers",
+   "journal": "JCAP",
+   "year": "2021",
+   "date": "2021-01",
+   "arxiv": "2101.03962",
+   "doi": "10.1088/1475-7516/2021/05/026",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "2006.15038",
+   "authors": [
+    "Joby P. Kochappan",
+    "Aparajita Sen",
+    "Tuhin Ghosh",
+    "Pravabati Chingangbam",
+    "Soumen Basak"
+   ],
+   "author_count": 5,
+   "title": "Statistical Isotropy of the CMB E-mode signal",
+   "journal": "",
+   "year": "2020",
+   "date": "2020-06",
+   "arxiv": "2006.15038",
+   "doi": "",
+   "citations": null,
+   "type": "preprint",
+   "inspire_url": ""
+  },
+  {
+   "id": "1911.04740",
+   "authors": [
+    "Priya Goyal",
+    "Pravabati Chingangbam",
+    "Stephen Appleby"
+   ],
+   "author_count": 3,
+   "title": "Morphology of CMB fields—effect of weak gravitational lensing",
+   "journal": "JCAP",
+   "year": "2020",
+   "date": "2019-11",
+   "arxiv": "1911.04740",
+   "doi": "10.1088/1475-7516/2020/02/020",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "1908.02440",
+   "authors": [
+    "Stephen Appleby",
+    "Joby P. K.",
+    "Pravabati Chingangbam",
+    "Changbom Park"
+   ],
+   "author_count": 4,
+   "title": "Ensemble Average of Three-Dimensional Minkowski Tensors of a Gaussian Random Field in Redshift Space",
+   "journal": "",
+   "year": "2019",
+   "date": "2019-08",
+   "arxiv": "1908.02440",
+   "doi": "10.3847/1538-4357/ab5057",
+   "citations": null,
+   "type": "preprint",
+   "inspire_url": ""
+  },
+  {
+   "id": "1904.06840",
+   "authors": [
+    "Akanksha Kapahtia",
+    "Pravabati Chingangbam",
+    "Stephen Appleby"
+   ],
+   "author_count": 3,
+   "title": "Morphology of 21cm brightness temperature during the Epoch of Reioinization using Contour Minkowski Tensor",
+   "journal": "JCAP",
+   "year": "2019",
+   "date": "2019-04",
+   "arxiv": "1904.06840",
+   "doi": "10.1088/1475-7516/2019/09/053",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "1807.01306",
+   "authors": [
+    "P.K. Joby",
+    "Pravabati Chingangbam",
+    "Tuhin Ghosh",
+    "Vidhya Ganesan",
+    "C.D. Ravikumar"
+   ],
+   "author_count": 5,
+   "title": "Search for anomalous alignments of structures in Planck data using Minkowski Tensors",
+   "journal": "JCAP",
+   "year": "2019",
+   "date": "2018-07",
+   "arxiv": "1807.01306",
+   "doi": "10.1088/1475-7516/2019/01/009",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "1806.01565",
+   "authors": [
+    "Sandeep Rana",
+    "Tuhin Ghosh",
+    "J.S. Bagla",
+    "Pravabati Chingangbam"
+   ],
+   "author_count": 4,
+   "title": "Non-Gaussianity of diffuse Galactic synchrotron emission at 408 MHz",
+   "journal": "Mon.Not.Roy.Astron.Soc.",
+   "year": "2018",
+   "date": "2018-06",
+   "arxiv": "1806.01565",
+   "doi": "10.1093/mnras/sty2348",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "1805.08752",
+   "authors": [
+    "Stephen Appleby",
+    "Pravabati Chingangbam",
+    "Changbom Park",
+    "K.P. Yogendran",
+    "P.K. Joby"
+   ],
+   "author_count": 5,
+   "title": "Minkowski Tensors in Three Dimensions - Probing the Anisotropy Generated by Redshift Space Distortion",
+   "journal": "Astrophys.J.",
+   "year": "2018",
+   "date": "2018-05",
+   "arxiv": "1805.08752",
+   "doi": "10.3847/1538-4357/aacf8c",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "1712.09195",
+   "authors": [
+    "Akanksha Kapahtia",
+    "Pravabati Chingangbam",
+    "Stephen Appleby",
+    "Changbom Park"
+   ],
+   "author_count": 4,
+   "title": "A novel probe of ionized bubble shape and size statistics of the epoch of reionization using the contour Minkowski Tensor",
+   "journal": "JCAP",
+   "year": "2018",
+   "date": "2017-12",
+   "arxiv": "1712.09195",
+   "doi": "10.1088/1475-7516/2018/10/011",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "1712.07466",
+   "authors": [
+    "Stephen Appleby",
+    "Pravabati Chingangbam",
+    "Changbom Park",
+    "Sungwook E. Hong",
+    "Juhan Kim",
+    "Vidhya Ganesan"
+   ],
+   "author_count": 6,
+   "title": "Minkowski Tensors in Two Dimensions - Probing the Morphology and Isotropy of the Matter and Galaxy Density Fields",
+   "journal": "Astrophys.J.",
+   "year": "2018",
+   "date": "2017-12",
+   "arxiv": "1712.07466",
+   "doi": "10.3847/1538-4357/aabb53",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "1707.04386",
+   "authors": [
+    "Pravabati Chingangbam",
+    "K P Yogendran",
+    "Joby P. K.",
+    "Vidhya Ganesan",
+    "Stephen Appleby",
+    "Changbom Park"
+   ],
+   "author_count": 6,
+   "title": "Tensor Minkowski Functionals for random fields on the sphere",
+   "journal": "JCAP",
+   "year": "2017",
+   "date": "2017-07",
+   "arxiv": "1707.04386",
+   "doi": "10.1088/1475-7516/2017/12/023",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "1705.04454",
+   "authors": [
+    "Pravabati Chingangbam",
+    "Vidhya Ganesan",
+    "K.P. Yogendran",
+    "Changbom Park"
+   ],
+   "author_count": 4,
+   "title": "On Minkowski Functionals of CMB polarization",
+   "journal": "Phys.Lett.B",
+   "year": "2017",
+   "date": "2017-05",
+   "arxiv": "1705.04454",
+   "doi": "10.1016/j.physletb.2017.05.030",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "1608.07452",
+   "authors": [
+    "Vidhya Ganesan",
+    "Pravabati Chingangbam"
+   ],
+   "author_count": 2,
+   "title": "Tensor Minkowski Functionals: first application to the CMB",
+   "journal": "JCAP",
+   "year": "2017",
+   "date": "2016-08",
+   "arxiv": "1608.07452",
+   "doi": "10.1088/1475-7516/2017/06/023",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "1412.6036",
+   "authors": [
+    "P. K. Joby",
+    "Pravabati Chingangbam",
+    "Subinoy Das"
+   ],
+   "author_count": 3,
+   "title": "Constraint on noncommutative spacetime from PLANCK data",
+   "journal": "Phys.Rev.D",
+   "year": "2015",
+   "date": "2014-12",
+   "arxiv": "1412.6036",
+   "doi": "10.1103/PhysRevD.91.083503",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "1411.5256",
+   "authors": [
+    "Vidhya Ganesan",
+    "Pravabati Chingangbam",
+    "K.P. Yogendran",
+    "Changbom Park"
+   ],
+   "author_count": 4,
+   "title": "Primordial non-Gaussian signatures in CMB polarization",
+   "journal": "JCAP",
+   "year": "2015",
+   "date": "2014-11",
+   "arxiv": "1411.5256",
+   "doi": "10.1088/1475-7516/2015/02/028",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "1406.0633",
+   "authors": [
+    "Tabish Qureshi",
+    "Pravabati Chingangbam",
+    "Sheeba Shafaq"
+   ],
+   "author_count": 3,
+   "title": "Understanding ghost interference",
+   "journal": "Int.J.Quant.Inf.",
+   "year": "2016",
+   "date": "2014-06",
+   "arxiv": "1406.0633",
+   "doi": "10.1142/s0219749916400360",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "seed33",
+   "authors": [
+    "P. Chingangbam",
+    "C. Park"
+   ],
+   "author_count": 2,
+   "title": "Residual foreground contamination in the WMAP data",
+   "journal": "J.Phys.Conf.Ser.",
+   "year": "2014",
+   "date": "2014",
+   "arxiv": "",
+   "doi": "10.1088/1742-6596/484/1/012028",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "1307.2384",
+   "authors": [
+    "Changbom Park",
+    "Pratyush Pranav",
+    "Pravabati Chingangbam",
+    "Rien van de Weygaert",
+    "Bernard Jones",
+    "Gert Vegter",
+    "Inkang Kim",
+    "Johan Hidding",
+    "Wojciech A. Hellwing"
+   ],
+   "author_count": 9,
+   "title": "Betti numbers of Gaussian fields",
+   "journal": "J.Korean Astron.Soc.",
+   "year": "2013",
+   "date": "2013-07",
+   "arxiv": "1307.2384",
+   "doi": "10.5303/JKAS.2013.46.3.125",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "1210.2250",
+   "authors": [
+    "Pravabati Chingangbam",
+    "Changbom Park"
+   ],
+   "author_count": 2,
+   "title": "Residual foreground contamination in the WMAP data and bias in non-Gaussianity estimation",
+   "journal": "JCAP",
+   "year": "2013",
+   "date": "2012-10",
+   "arxiv": "1210.2250",
+   "doi": "10.1088/1475-7516/2013/02/031",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "1206.0436",
+   "authors": [
+    "Pravabati Chingangbam",
+    "Changbom Park",
+    "K.P. Yogendran",
+    "Rien van de Weygaert"
+   ],
+   "author_count": 4,
+   "title": "Hot and cold spots counts as probes of non-Gaussianity in the CMB",
+   "journal": "Astrophys.J.",
+   "year": "2012",
+   "date": "2012-06",
+   "arxiv": "1206.0436",
+   "doi": "10.1088/0004-637X/755/2/122",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "1006.4006",
+   "authors": [
+    "Pravabati Chingangbam",
+    "Qing-Guo Huang"
+   ],
+   "author_count": 2,
+   "title": "New features in curvaton model",
+   "journal": "Phys.Rev.D",
+   "year": "2011",
+   "date": "2010-06",
+   "arxiv": "1006.4006",
+   "doi": "10.1103/PhysRevD.83.023527",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "1003.0272",
+   "authors": [
+    "Graziano Rossi",
+    "Pravabati Chingangbam",
+    "Changbom Park"
+   ],
+   "author_count": 3,
+   "title": "Statistics of the excursion sets in models with local primordial non-Gaussianity",
+   "journal": "Mon.Not.Roy.Astron.Soc.",
+   "year": "2011",
+   "date": "2010-03",
+   "arxiv": "1003.0272",
+   "doi": "10.1111/j.1365-2966.2010.17825.x",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "0912.3128",
+   "authors": [
+    "Pravabati Chingangbam",
+    "Hironobu Kihara",
+    "Muneto Nitta"
+   ],
+   "author_count": 3,
+   "title": "Gauge symmetry breaking in ten-dimensional Yang-Mills theory dynamically compactified on S**6",
+   "journal": "Phys.Rev.D",
+   "year": "2010",
+   "date": "2009-12",
+   "arxiv": "0912.3128",
+   "doi": "10.1103/PhysRevD.81.085008",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "0908.1696",
+   "authors": [
+    "Pravabati Chingangbam",
+    "Changbom Park"
+   ],
+   "author_count": 2,
+   "title": "Statistical nature of non-Gaussianity from cubic order primordial perturbations: CMB map simulations and genus statistic",
+   "journal": "JCAP",
+   "year": "2009",
+   "date": "2009-08",
+   "arxiv": "0908.1696",
+   "doi": "10.1088/1475-7516/2009/12/019",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "0904.2518",
+   "authors": [
+    "Rajeev Kumar Jain",
+    "Pravabati Chingangbam",
+    "L. Sriramkumar",
+    "Tarun Souradeep"
+   ],
+   "author_count": 4,
+   "title": "The tensor-to-scalar ratio in punctuated inflation",
+   "journal": "Phys.Rev.D",
+   "year": "2010",
+   "date": "2009-04",
+   "arxiv": "0904.2518",
+   "doi": "10.1103/PhysRevD.82.023509",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "0902.1067",
+   "authors": [
+    "Rajeev Kumar Jain",
+    "Pravabati Chingangbam",
+    "L. Sriramkumar"
+   ],
+   "author_count": 3,
+   "title": "Reheating in tachyonic inflationary models: Effects on the large scale curvature perturbations",
+   "journal": "Nucl.Phys.B",
+   "year": "2011",
+   "date": "2009-02",
+   "arxiv": "0902.1067",
+   "doi": "10.1016/j.nuclphysb.2011.07.003",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "0902.2619",
+   "authors": [
+    "Pravabati Chingangbam",
+    "Qing-Guo Huang"
+   ],
+   "author_count": 2,
+   "title": "The Curvature Perturbation in the Axion-type Curvaton Model",
+   "journal": "JCAP",
+   "year": "2009",
+   "date": "2009-02",
+   "arxiv": "0902.2619",
+   "doi": "10.1088/1475-7516/2009/04/031",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "seed45",
+   "authors": [
+    "M. Kaplinghat",
+    "L. Sriramkumar",
+    "A. Berera",
+    "P. Chingangbam",
+    "R.K. Jain",
+    "M. Joy",
+    "J. Martin",
+    "S. Mohanty",
+    "A. Nautiyal",
+    "R. Rangarajan",
+    "S. Ray",
+    "V.H.S. Kumar"
+   ],
+   "author_count": 12,
+   "title": "WHEPP-X: Report on the working group on cosmology",
+   "journal": "Pramana",
+   "year": "2009",
+   "date": "2009",
+   "arxiv": "",
+   "doi": "10.1007/s12043-009-0022-y",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "0809.3915",
+   "authors": [
+    "Rajeev Kumar Jain",
+    "Pravabati Chingangbam",
+    "Jinn-Ouk Gong",
+    "L. Sriramkumar",
+    "Tarun Souradeep"
+   ],
+   "author_count": 5,
+   "title": "Punctuated inflation and the low CMB multipoles",
+   "journal": "JCAP",
+   "year": "2009",
+   "date": "2008-09",
+   "arxiv": "0809.3915",
+   "doi": "10.1088/1475-7516/2009/01/009",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "astro-ph/0703762",
+   "authors": [
+    "Rajeev Kumar Jain",
+    "Pravabati Chingangbam",
+    "L. Sriramkumar"
+   ],
+   "author_count": 3,
+   "title": "On the evolution of tachyonic perturbations at super-Hubble scales",
+   "journal": "JCAP",
+   "year": "2007",
+   "date": "2007-03",
+   "arxiv": "astro-ph/0703762",
+   "doi": "10.1088/1475-7516/2007/10/003",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "quant-ph/0502162",
+   "authors": [
+    "Pravabati Chingangbam",
+    "Tabish Qureshi"
+   ],
+   "author_count": 2,
+   "title": "Ghost interference and quantum erasure",
+   "journal": "Prog.Theor.Phys.",
+   "year": "2012",
+   "date": "2005-02",
+   "arxiv": "quant-ph/0502162",
+   "doi": "10.1143/PTP.127.383",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "hep-th/0411210",
+   "authors": [
+    "Pravabati Chingangbam",
+    "Sudhakar Panda",
+    "Atri Deshamukhya"
+   ],
+   "author_count": 3,
+   "title": "Non-minimally coupled tachyonic inflation in warped string background",
+   "journal": "JHEP",
+   "year": "2005",
+   "date": "2004-11",
+   "arxiv": "hep-th/0411210",
+   "doi": "10.1088/1126-6708/2005/02/052",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "hep-th/0409015",
+   "authors": [
+    "Pravabati Chingangbam",
+    "Tabish Qureshi"
+   ],
+   "author_count": 2,
+   "title": "Dynamics of rolling massive scalar field cosmology",
+   "journal": "Int.J.Mod.Phys.A",
+   "year": "2005",
+   "date": "2004-09",
+   "arxiv": "hep-th/0409015",
+   "doi": "10.1142/S0217751X05024298",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "hep-th/0301140",
+   "authors": [
+    "M. Sami",
+    "Pravabati Chingangbam",
+    "Tabish Qureshi"
+   ],
+   "author_count": 3,
+   "title": "Cosmological aspects of rolling tachyon",
+   "journal": "Pramana",
+   "year": "2004",
+   "date": "2003-01",
+   "arxiv": "hep-th/0301140",
+   "doi": "10.1007/BF02705366",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "quant-ph/0301133",
+   "authors": [
+    "Pankaj Sharan",
+    "Pravabati Chingangbam"
+   ],
+   "author_count": 2,
+   "title": "Lagrangian in quantum mechanics is a connection one form",
+   "journal": "",
+   "year": "2003",
+   "date": "2003-01",
+   "arxiv": "quant-ph/0301133",
+   "doi": "",
+   "citations": null,
+   "type": "preprint",
+   "inspire_url": ""
+  },
+  {
+   "id": "hep-th/0205179",
+   "authors": [
+    "M. Sami",
+    "Pravabati Chingangbam",
+    "Tabish Qureshi"
+   ],
+   "author_count": 3,
+   "title": "Aspects of tachyonic inflation with exponential potential",
+   "journal": "Phys.Rev.D",
+   "year": "2002",
+   "date": "2002-05",
+   "arxiv": "hep-th/0205179",
+   "doi": "10.1103/PhysRevD.66.043530",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "quant-ph/0105074",
+   "authors": [
+    "Pravabati Chingangbam",
+    "Pankaj Sharan"
+   ],
+   "author_count": 2,
+   "title": "Pseudo-forces in quantum mechanics",
+   "journal": "Phys.Rev.A",
+   "year": "2001",
+   "date": "2001-05",
+   "arxiv": "quant-ph/0105074",
+   "doi": "10.1103/PhysRevA.64.042107",
+   "citations": null,
+   "type": "article",
+   "inspire_url": ""
+  },
+  {
+   "id": "quant-ph/9910049",
+   "authors": [
+    "P. Chingangbam",
+    "Pankaj Sharan"
+   ],
+   "author_count": 2,
+   "title": "Reduced phase space quantization",
+   "journal": "",
+   "year": "1999",
+   "date": "1999-10",
+   "arxiv": "quant-ph/9910049",
+   "doi": "",
+   "citations": null,
+   "type": "preprint",
+   "inspire_url": ""
+  }
+ ]
+}
