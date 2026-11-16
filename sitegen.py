@@ -24,10 +24,12 @@ DATA = ROOT / "data"
 ROLE_ORDER = [("pi", "Principal Investigator", "Principal Investigator"),
               ("postdoc", "Postdoctoral Researchers", "Postdoctoral Researcher"),
               ("phd", "Doctoral Students", "Doctoral Student"),
+              ("intern", "Interns", "Intern"),
               ("masters", "Masters & Project Students", "Masters Student"),
-              ("visitor", "Visitors & Interns", "Visitor")]
+              ("visitor", "Visitors", "Visitor")]
 ALUM_ORDER = [("phd", "PhD Alumni"), ("postdoc", "Postdoctoral Alumni"),
-              ("masters", "Masters & Project Students"), ("other", "Other Former Members")]
+              ("masters", "Masters & Project Students"), ("intern", "Former Interns"),
+              ("other", "Other Former Members")]
 
 # --------------------------------------------------------------------------- helpers
 
@@ -256,11 +258,8 @@ def shell(S, current, title, body, desc="", math=False, home=False):
     foot_links = "".join('<li><a href="%s">%s</a></li>' % (f, esc(l)) for f, l in NAV + MORE + LAST)
     social = "".join('<li><a href="%s" target="_blank" rel="noopener noreferrer">%s</a></li>' % (esc(safe_url(x.get("url"))), esc(x.get("label")))
                      for x in g("social", []) if safe_url(x.get("url")))
-    emails = []
-    for e in [g("email"), g("group_email")]:
-        if e and e not in emails:
-            emails.append(e)
-    email_html = "".join('<li><a href="mailto:%s">%s</a></li>' % (esc(e), esc(e)) for e in emails)
+    cu = safe_url(g("contact_url"))
+    email_html = ('<li><a href="%s" target="_blank" rel="noopener noreferrer">%s</a></li>' % (esc(cu), esc(g("contact_label") or "Official contact page"))) if cu else ""
     return """<!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
@@ -363,15 +362,13 @@ def inspire_link(m):
     return "INSPIRE", "https://inspirehep.net/authors?q=" + quote(v)
 
 
-def person_links(m, mail=True):
+def person_links(m):
     out = []
     lab, url = inspire_link(m)
     if url:
         out.append(pill(lab, url, "inspire"))
     for l in m.get("links", []):
         out.append(pill(l.get("label", "Link"), l.get("url", "")))
-    if mail and m.get("email"):
-        out.append(pill("Email", "mailto:" + m["email"]))
     return '<div class="links-row">%s</div>' % "".join(out)
 
 
@@ -393,8 +390,6 @@ def person_card(m, lead=False, delay=0):
         rows.append('<p class="row"><b>PhD</b> &middot; %s</p>' % esc(m["degree"]))
     if m.get("research"):
         rows.append('<p class="row"><b>Research</b> &middot; %s</p>' % esc(m["research"]))
-    if m.get("email"):
-        rows.append('<p class="row"><b>Email</b> &middot; <a href="mailto:%s">%s</a></p>' % (esc(m["email"]), esc(m["email"])))
     bio = '<p class="bio">%s</p>' % rich(m["bio"]) if m.get("bio") else ""
     return """<article class="card person%s reveal" id="%s" style="--d:%.2fs">
   %s
@@ -405,7 +400,7 @@ def person_card(m, lead=False, delay=0):
     %s
   </div>
 </article>""" % (" lead" if lead else "", esc(m["id"]), delay, avatar(m), esc(m["name"]), esc(role_title), "".join(rows), bio,
-                 tags_html(m.get("tags")), person_links(m, mail=False))
+                 tags_html(m.get("tags")), person_links(m))
 
 
 def alum_card(a, delay=0):
@@ -426,7 +421,7 @@ def alum_card(a, delay=0):
     %s%s%s
     %s
   </div>
-</article>""" % (esc(a["id"]), delay, avatar(a), esc(a["name"]), "".join(rows), bio, tags_html(a.get("tags")), person_links(a, mail=False))
+</article>""" % (esc(a["id"]), delay, avatar(a), esc(a["name"]), "".join(rows), bio, tags_html(a.get("tags")), person_links(a))
 
 
 def find_paper(S, arxiv):
@@ -484,21 +479,12 @@ def news_item(n, kind_attr=True):
             ('<p>%s</p>' % rich(n["text"])) if n.get("text") else "", link)
 
 
-def award_card(a):
-    link = ""
-    if safe_url(a.get("link")):
-        link = ' <a href="%s" target="_blank" rel="noopener noreferrer">More &rarr;</a>' % esc(safe_url(a["link"]))
-    who = " &middot; ".join(x for x in [esc(a.get("who")), esc(fmt_date(a.get("date")))] if x)
-    return """<div class="card award reveal"><div class="trophy">%s</div><div><p class="w">%s</p><h3>%s</h3>%s</div></div>""" % (
-        TROPHY, who, rich(a.get("title")), ('<p>%s%s</p>' % (rich(a["text"]), link)) if a.get("text") else ('<p>%s</p>' % link.strip() if link else ""))
-
-
 def sorted_news(S):
-    return sorted(S.d.get("news", []), key=lambda n: dkey(n.get("date")), reverse=True)
-
-
-def sorted_awards(S):
-    return sorted(S.d.get("awards", []), key=lambda n: dkey(n.get("date")), reverse=True)
+    items = list(S.d.get("news", []))
+    for a in S.d.get("awards", []):          # older data files: awards are shown as news items of type "Award"
+        items.append({"date": a.get("date"), "kind": "Award", "title": a.get("title"),
+                      "text": a.get("text") or a.get("who", ""), "link": a.get("link")})
+    return sorted(items, key=lambda n: dkey(n.get("date")), reverse=True)
 
 
 def pub_item(S, p):
@@ -560,15 +546,10 @@ def page_index(S):
     members = S.members
     lead = next((m for m in members if m["id"] == g("lead_member")), members[0] if members else None)
     stat_items = [(st["papers"], "Publications")]
-    if st["cites"]:
-        stat_items.append((st["cites"], "Citations"))
-    else:
-        stat_items.append((st["coauthors"], "Co-authors"))
-    stat_items.append((len(members), "Team members"))
-    if S.alumni:
-        stat_items.append((len(S.alumni), "Alumni"))
     stats = "".join('<div><dt data-count="%d">%d</dt><dd>%s</dd></div>' % (n, n, esc(l)) for n, l in stat_items)
 
+    sats = "".join('<a class="sat" href="team.html#%s" aria-label="%s"><span class="nm">%s</span>%s</a>' % (
+        esc(m["id"]), esc(m["name"]), esc(m["name"]), avatar(m)) for m in members)
     hero = """<section class="hero">
   <div class="wrap hero-grid">
     <div class="hero-copy">
@@ -584,13 +565,11 @@ def page_index(S):
     <div class="hero-visual reveal" style="--d:.2s">
       <div class="globe-wrap">
         <div class="halo"></div>
-        <svg class="rings" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-          <circle cx="50" cy="50" r="49.5"/>
-          <ellipse class="dash" cx="50" cy="50" rx="49.5" ry="17" transform="rotate(-24 50 50)"/>
-          <circle class="orb" cx="94" cy="32" r="1.1"/>
-        </svg>
+        <svg class="orbits back" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"></svg>
         <div class="globe-ph"></div>
         <canvas id="globe" role="img" aria-label="Rotating illustrative map of a cosmic microwave background-like temperature field"></canvas>
+        <svg class="orbits front" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"></svg>
+        %(sats)s
         <span class="chip c1">&Delta;T / T &sim; <b>10<sup>-5</sup></b></span>
         <span class="chip c2">Gaussian random field</span>
         <span class="chip c3">Minkowski <b>V<sub>0,1,2</sub></b></span>
@@ -600,7 +579,7 @@ def page_index(S):
   </div>
   <span class="cue" aria-hidden="true"></span>
 </section>""" % dict(inst=esc(g("institute")), city=esc(g("city")), headline=rich(g("hero_headline")), tagline=esc(g("tagline")),
-                     arrow=ARROW, stats=stats, caption=esc(g("hero_caption")))
+                     arrow=ARROW, stats=stats, caption=esc(g("hero_caption")), sats=sats)
 
     about = """<section class="sec" id="about"><div class="wrap">
   <div class="about">
@@ -629,25 +608,17 @@ def page_index(S):
             sec_head("Highlighted work", "Recent *research*", "A selection of our latest papers.", ("research.html#highlights", "More highlights")), cards, st["papers"], ARROW)
 
     news = sorted_news(S)[:4]
-    awards = sorted_awards(S)[:3]
     news_html = ""
-    if news or awards:
-        left = ""
-        if news:
-            left = '<div><p class="col-title"><span>Latest news</span><a href="news.html">View all</a></p><ol class="timeline">%s</ol></div>' % "".join(news_item(n) for n in news)
-        right = ""
-        if awards:
-            right = '<div><p class="col-title"><span>Awards &amp; honours</span><a href="news.html#awards">View all</a></p>%s</div>' % "".join(award_card(a) for a in awards)
-        single = " single" if not (left and right) else ""
-        news_html = '<section class="sec tight"><div class="wrap">%s<div class="duo%s">%s%s</div></div></section>' % (
-            sec_head("Updates", "News & *awards*"), single, left, right)
+    if news:
+        news_html = '<section class="sec tight"><div class="wrap">%s<div class="duo single"><div><ol class="timeline">%s</ol></div></div></div></section>' % (
+            sec_head("Updates", "Latest *news*", "", ("news.html", "All news")), "".join(news_item(n) for n in news))
 
     crew = ""
     if members:
         shown = ([lead] if lead else []) + [m for m in members if m is not lead]
         av = "".join('<a href="team.html#%s" title="%s" aria-label="%s">%s</a>' % (esc(m["id"]), esc(m["name"]), esc(m["name"]), avatar(m)) for m in shown)
         crew = '<section class="sec tight"><div class="wrap"><div class="card reveal" style="padding:clamp(24px,4vw,44px)">%s<div class="crew" style="margin-bottom:26px">%s</div><a class="btn" href="team.html">Meet the whole team %s</a></div></div></section>' % (
-            sec_head("People", "A small group with *big* questions"), av, ARROW)
+            sec_head("People", "A team curious about *details*"), av, ARROW)
 
     cta = """<section class="sec tight"><div class="wrap"><div class="cta-band reveal">
   <p class="eyebrow">Get in touch</p><h2>%s</h2><p>%s</p>
@@ -663,6 +634,9 @@ def page_team(S):
     secs = []
     for role, label, _ in ROLE_ORDER:
         ms = [m for m in S.members if m.get("role") == role]
+        if not ms and role == "intern":
+            secs.append('<section class="team-sec"><h2>%s</h2><p class="muted reveal">No interns at the moment. Interested in a research internship? See the <a href="contact.html">contact page</a>.</p></section>' % esc(label))
+            continue
         if not ms:
             continue
         if role == "pi":
@@ -738,7 +712,6 @@ def page_publications(S):
     stat_cards = [(st["papers"], "Papers")]
     if st["cites"] is not None:
         stat_cards += [(st["cites"], "Citations"), (st["h"], "h-index")]
-    stat_cards.append((st["coauthors"], "Co-authors"))
     stats_html = '<div class="pubstats">%s</div>' % "".join(
         '<div class="card reveal"><div class="n" data-count="%d">%d</div><div class="l">%s</div></div>' % (n, n, l) for n, l in stat_cards)
     bars = ""
@@ -785,8 +758,7 @@ def page_publications(S):
 
 def page_news(S):
     news = sorted_news(S)
-    awards = sorted_awards(S)
-    body = [phead(S, "News", "News & *awards*", "What the group has been up to.")]
+    body = [phead(S, "News", "Latest *news*", "What the group has been up to.")]
     inner = []
     if news:
         kinds = []
@@ -801,9 +773,6 @@ def page_news(S):
         inner.append('<section>%s<ol class="timeline">%s</ol></section>' % (filt, "".join(news_item(n) for n in news)))
     else:
         inner.append('<p class="empty">No news yet.</p>')
-    if awards:
-        inner.append('<section id="awards" style="margin-top:clamp(60px,8vw,110px)">%s<div class="grid c2">%s</div></section>' % (
-            sec_head("Recognition", "Awards & *honours*"), "".join(award_card(a) for a in awards)))
     body.append('<div class="sec tight"><div class="wrap">%s</div></div>' % "".join(inner))
     return shell(S, "news.html", "News", "\n".join(body))
 
@@ -881,11 +850,9 @@ def page_calendar(S):
 def page_contact(S):
     g = S.g
     body = [phead(S, "Contact", "Get in *touch*", "Questions about our research, prospective students, collaborations, visits.")]
-    emails = []
-    for e in [g("email"), g("group_email")]:
-        if e and e not in emails:
-            emails.append(e)
-    c1 = '<div class="card reveal"><span class="k">Email</span><h3>Write to us</h3>%s</div>' % "".join('<p><a href="mailto:%s">%s</a></p>' % (esc(e), esc(e)) for e in emails)
+    cu = safe_url(g("contact_url"))
+    c1 = '<div class="card reveal"><span class="k">Contact</span><h3>Write to us</h3><p>For formal enquiries about students, internships, visits and collaborations, please use the official contact page of the group lead at the institute.</p><p style="margin-top:14px">%s</p></div>' % (
+        pill(g("contact_label") or "Official contact page", cu, "inspire") if cu else "")
     mp = pill("Open in Maps", g("map_url"), "inspire") if g("map_url") else ""
     c2 = '<div class="card reveal" style="--d:.08s"><span class="k">Visit</span><h3>%s</h3><p>%s</p><p style="margin-top:14px">%s</p></div>' % (esc(g("institute")), esc(g("address") or g("city")), mp)
     soc = "".join('<p>%s</p>' % pill(x.get("label"), x.get("url")) for x in g("social", []) if safe_url(x.get("url")))

@@ -376,16 +376,15 @@ def crud(title, getlist, spec, id_from, label_keys, extra=None, noun="item", fol
 # --------------------------------------------------------------------------- specs
 
 ROLES = [("pi", "Principal Investigator"), ("postdoc", "Postdoctoral Researcher"), ("phd", "Doctoral (PhD) Student"),
-         ("masters", "Masters / Project Student"), ("visitor", "Visitor / Intern")]
-ALUM_CATS = [("phd", "PhD alumnus/alumna"), ("postdoc", "Postdoctoral alumnus/alumna"), ("masters", "Masters / project student"), ("other", "Other")]
-ROLE_TITLES = {"pi": "Professor", "postdoc": "Postdoctoral Researcher", "phd": "Doctoral Student", "masters": "Masters Student", "visitor": "Visitor"}
+         ("intern", "Intern"), ("masters", "Masters / Project Student"), ("visitor", "Visitor")]
+ALUM_CATS = [("phd", "PhD alumnus/alumna"), ("postdoc", "Postdoctoral alumnus/alumna"), ("masters", "Masters / project student"), ("intern", "Former intern"), ("other", "Other")]
+ROLE_TITLES = {"pi": "Professor", "postdoc": "Postdoctoral Researcher", "phd": "Doctoral Student", "intern": "Intern", "masters": "Masters Student", "visitor": "Visitor"}
 
 MEMBER = [
     F("name", "Full name", required=True),
     F("role", "Role", "choice", choices=ROLES, default="phd"),
     F("title", "Title shown on the card (e.g. Professor, Postdoctoral Researcher)"),
     F("photo", "Photo", "image", folder="team"),
-    F("email", "Email"),
     F("research", "Research interests (one line)"),
     F("degree", "PhD / degree info for the card, e.g. 'CUSAT, Dept. of Physics (2025)' (optional)"),
     F("tags", "Keyword badges", "list"),
@@ -415,13 +414,6 @@ NEWS = [
     F("text", "Details (a sentence or two)", "text"),
     F("link", "Link (optional)"),
     F("link_label", "Link button text (optional, default 'Read more')"),
-]
-AWARD = [
-    F("title", "Award / honour", required=True),
-    F("who", "Recipient"),
-    F("date", "Date", "date"),
-    F("text", "Details (optional)", "text"),
-    F("link", "Link (optional)"),
 ]
 HIGHLIGHT = [
     F("arxiv", "arXiv id (e.g. 2604.08409) - the details can be fetched automatically"),
@@ -457,7 +449,7 @@ def do_members():
     def to_alumni(d, items, idx):
         m = items[idx]
         print("Moving %s to Former Members." % m["name"])
-        cat = choose("Category", ALUM_CATS, {"postdoc": "postdoc", "phd": "phd", "masters": "masters"}.get(m.get("role"), "other"))
+        cat = choose("Category", ALUM_CATS, {"postdoc": "postdoc", "phd": "phd", "masters": "masters", "intern": "intern"}.get(m.get("role"), "other"))
         a = {"id": unique_id(m["id"], d["alumni"]), "name": m["name"], "category": cat, "photo": m.get("photo", ""),
              "thesis": ask("Thesis title (optional)"), "year": ask("Year or years (e.g. 2026, or 2021 - 2024)"),
              "now_at": ask("Now at"), "research": m.get("research", ""), "tags": m.get("tags", []),
@@ -565,10 +557,6 @@ def do_highlights():
 
 def do_news():
     crud("News & updates", lambda d: d["news"], NEWS, "title", ["date", "kind", "title"], noun="news item", new_first=True)
-
-
-def do_awards():
-    crud("Awards & honours", lambda d: d["awards"], AWARD, "title", ["date", "title", "who"], noun="award", new_first=True)
 
 
 def do_areas():
@@ -685,7 +673,8 @@ def add_photos(d, album):
 SETTINGS = [
     F("group_name", "Group name"), F("brand_title", "Short name shown in the top-left of every page"),
     F("institute", "Institute"), F("city", "City, country"), F("address", "Postal address (Contact page)"),
-    F("map_url", "Link to the map (Google Maps URL)"), F("email", "Main contact email"), F("group_email", "Group email (optional)"),
+    F("map_url", "Link to the map (Google Maps URL)"),
+    F("contact_url", "Formal contact link (the group lead's institute profile page)"), F("contact_label", "Text of the contact button"),
     F("tagline", "Tagline (under the headline)"),
     F("hero_headline", "Home page headline (put *asterisks* around the word to highlight)"),
     F("about_title", "About section title (use *asterisks* to highlight a word)"),
@@ -878,12 +867,11 @@ def main_menu():
             ("1", "Team members (add / edit / move to alumni)"),
             ("2", "Former members"),
             ("3", "Research highlights"),
-            ("4", "News & updates"),
-            ("5", "Awards & honours"),
-            ("6", "Gallery (albums & photos)"),
-            ("7", "Publications (refresh from INSPIRE, hide, add)"),
-            ("8", "Research areas"),
-            ("9", "Collaborations"),
+            ("4", "News & updates (use type \"Award\" for awards)"),
+            ("5", "Gallery (albums & photos)"),
+            ("6", "Publications (refresh from INSPIRE, hide, add)"),
+            ("7", "Research areas"),
+            ("8", "Collaborations"),
             ("r", "Resources & video lectures"),
             ("s", "Site settings (name, headline, about text, contact, calendar ...)"),
             ("c", "Check for missing images"),
@@ -895,8 +883,8 @@ def main_menu():
             print("Bye!")
             return
         try:
-            {"1": do_members, "2": do_alumni, "3": do_highlights, "4": do_news, "5": do_awards, "6": do_gallery,
-             "7": do_publications, "8": do_areas, "9": do_collab, "r": do_resources, "s": do_settings, "c": do_check,
+            {"1": do_members, "2": do_alumni, "3": do_highlights, "4": do_news, "5": do_gallery,
+             "6": do_publications, "7": do_areas, "8": do_collab, "r": do_resources, "s": do_settings, "c": do_check,
              "b": lambda: sitegen.build(), "v": do_serve, "g": do_git}[c]()
         except KeyboardInterrupt:
             print("\n  Cancelled.")

@@ -8,7 +8,7 @@ Needs only Python 3.8+ (no packages).
 ```
 python manage.py
 ```
-A menu lets you add / edit / remove: **team members, former members, research highlights, news, awards,
+A menu lets you add / edit / remove: **team members (PI, postdocs, PhD students, interns ...), former members, research highlights, news (awards are news items of type "Award"),
 gallery albums & photos, research areas, collaborations, resources, site settings** and manage **publications**.
 The site is rebuilt after every change. Then:
 
@@ -27,6 +27,9 @@ does this automatically every week once the repo is on GitHub.
 
 Every member has an INSPIRE link (give the author id in the member form; without one the site links to an
 INSPIRE author search) plus any number of extra links (website, Google Scholar, ORCID, ADS, GitHub...).
+
+## Contact details
+No email addresses are shown on the site. Formal contact goes through the link in Settings -> *Formal contact link* (the lead's IIA profile page).
 
 ## Images
 All under `images/`: `team/`, `past_members/`, `research/`, `gallery/`, `collaborations/`, `site/` (`cmb.jpg` is
