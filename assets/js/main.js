@@ -268,6 +268,79 @@
     setTimeout(computeChunk, 30);
   }
 
+  /* ---------- 6b. team members orbiting the globe ----------
+     Every member is a "satellite" on a tilted circular orbit. Positions are projected
+     to the screen in percent of the globe box; satellites on the far side of the globe
+     are dimmed, shrunk and drawn behind the sphere. ------------------------------ */
+  function satellites() {
+    var wrap = $('.globe-wrap'); if (!wrap) return;
+    var sats = $$('.sat', wrap); if (!sats.length) return;
+    var NS = 'http://www.w3.org/2000/svg', D = Math.PI / 180;
+    /* orbit planes: tilt from the screen plane, rotation in the screen plane, radius (% of box), angular speed (rad/s) */
+    var rings = [
+      { alpha: 66 * D, phi: -24 * D, a: 47, w: 0.085 },
+      { alpha: 58 * D, phi: 30 * D, a: 49.5, w: -0.066 },
+      { alpha: 76 * D, phi: 84 * D, a: 45, w: 0.075 }
+    ];
+    var counts = [0, 0, 0], i;
+    sats.forEach(function (_, k) { counts[k % 3]++; });
+    var seen = [0, 0, 0];
+    var items = sats.map(function (el, k) {
+      var r = k % 3, j = seen[r]++;
+      return { el: el, ring: rings[r], th0: 2 * Math.PI * j / counts[r] + r * 1.1 };
+    });
+    function point(R, th) {
+      var x = Math.cos(th), y = Math.sin(th) * Math.cos(R.alpha), z = Math.sin(th) * Math.sin(R.alpha);
+      return [50 + R.a * (x * Math.cos(R.phi) - y * Math.sin(R.phi)), 50 + R.a * (x * Math.sin(R.phi) + y * Math.cos(R.phi)), z];
+    }
+    /* orbit lines: far half under the sphere, near half over it */
+    var svgBack = $('.orbits.back', wrap), svgFront = $('.orbits.front', wrap);
+    function path(svg, d) { var p = document.createElementNS(NS, 'path'); p.setAttribute('d', d); svg.appendChild(p); }
+    if (svgBack && svgFront) rings.forEach(function (R) {
+      var f = '', b = '', prev = null, n = 180;
+      for (i = 0; i <= n; i++) {
+        var q = point(R, 2 * Math.PI * i / n), front = q[2] >= 0;
+        var seg = (front ? 'L' : 'L') + q[0].toFixed(2) + ' ' + q[1].toFixed(2) + ' ';
+        if (prev === null || prev !== front) {
+          if (prev !== null) { if (front) { b += seg; f += 'M' + q[0].toFixed(2) + ' ' + q[1].toFixed(2) + ' '; } else { f += seg; b += 'M' + q[0].toFixed(2) + ' ' + q[1].toFixed(2) + ' '; } prev = front; continue; }
+          if (front) f += 'M' + q[0].toFixed(2) + ' ' + q[1].toFixed(2) + ' '; else b += 'M' + q[0].toFixed(2) + ' ' + q[1].toFixed(2) + ' ';
+          prev = front; continue;
+        }
+        if (front) f += seg; else b += seg;
+      }
+      path(svgFront, f); path(svgBack, b);
+    });
+    wrap.classList.add('orbiting');
+
+    var t0 = 0, paused = false, inView = true, raf = 0;
+    function place(t) {
+      items.forEach(function (it) {
+        var th = it.th0 + it.ring.w * t, q = point(it.ring, th), zn = Math.sin(th) * Math.sin(it.ring.alpha), u = (zn + 1) / 2;
+        it.el.style.left = q[0].toFixed(2) + '%'; it.el.style.top = q[1].toFixed(2) + '%';
+        it.el.style.transform = 'translate(-50%,-50%) scale(' + (0.74 + 0.34 * u).toFixed(3) + ')';
+        it.el.style.opacity = (0.5 + 0.5 * u).toFixed(2);
+        it.el.classList.toggle('back', zn < 0);
+      });
+    }
+    var last = 0, clock = 0;
+    function loop(ts) {
+      raf = 0; if (!inView || doc.hidden) return;
+      var dt = last ? Math.min(0.1, (ts - last) / 1000) : 0; last = ts;
+      if (!paused) clock += dt;
+      place(clock); raf = requestAnimationFrame(loop);
+    }
+    function kick() { if (!raf && !reduce) { last = 0; raf = requestAnimationFrame(loop); } }
+    place(0);
+    if (reduce) return;
+    sats.forEach(function (el) {
+      on(el, 'mouseenter', function () { paused = true; }); on(el, 'mouseleave', function () { paused = false; });
+      on(el, 'focus', function () { paused = true; }); on(el, 'blur', function () { paused = false; });
+    });
+    if ('IntersectionObserver' in window) new IntersectionObserver(function (en) { inView = en[0].isIntersecting; if (inView) kick(); }).observe(wrap);
+    on(doc, 'visibilitychange', function () { if (!doc.hidden) kick(); });
+    kick();
+  }
+
   /* ---------- 7. publications: search, filter, sort ---------- */
   function pubs() {
     var list = $('#pub-list'); if (!list) return;
@@ -381,7 +454,7 @@
 
   /* ---------- go ---------- */
   function init() {
-    reveal(); counters(); starfield(); globe(); pubs(); newsFilter(); highlights(); lightbox(); maths();
+    reveal(); counters(); starfield(); globe(); satellites(); pubs(); newsFilter(); highlights(); lightbox(); maths();
   }
   if (doc.readyState === 'loading') doc.addEventListener('DOMContentLoaded', init); else init();
 })();

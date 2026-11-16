@@ -6,11 +6,9 @@
   "city": "Bengaluru, India",
   "address": "Indian Institute of Astrophysics, II Block, Koramangala, Bengaluru 560034, India",
   "map_url": "https://www.google.com/maps/search/?api=1&query=Indian+Institute+of+Astrophysics+Koramangala+Bengaluru",
-  "email": "prava@iiap.res.in",
-  "group_email": "prava.cosmology.iia@gmail.com",
   "tagline": "Cosmic Microwave Background • Large Scale Structure • Statistical Inference",
-  "hero_headline": "Mapping the *cosmos* through data, statistics, and fundamental physics.",
-  "hero_caption": "Illustrative Gaussian random field on a sphere, drawn with a CMB-style palette. Drag to rotate. Not real data.",
+  "hero_headline": "Mapping the *cosmos* with fundamental physics and data.",
+  "hero_caption": "Illustrative Gaussian random field on a sphere (not real data). Drag to rotate. Our team orbits it like satellites: hover or tap to say hello.",
   "about_eyebrow": "About the group",
   "about_title": "Understanding the Universe through its *statistics*",
   "about": [
@@ -39,7 +37,9 @@
     "url": "https://inspirehep.net/authors/1046872?ui-citation-summary=true"
    }
   ],
-  "default_theme": "dark"
+  "default_theme": "dark",
+  "contact_url": "https://www.iiap.res.in/people/profile/academic/pravabati-chingangbam/",
+  "contact_label": "Prof. Pravabati Chingangbam · IIA profile"
  },
  "research_areas": [
   {
@@ -122,7 +122,6 @@
    "role": "pi",
    "title": "Professor",
    "photo": "images/team/Prava.jpeg",
-   "email": "prava@iiap.res.in",
    "research": "CMB, Statistical Inference",
    "degree": "",
    "tags": [
@@ -149,7 +148,6 @@
    "role": "phd",
    "title": "Doctoral Student",
    "photo": "images/team/kanan.jpg",
-   "email": "kanan.virkar@iiap.res.in",
    "research": "21 cm Cosmology",
    "degree": "",
    "tags": [
@@ -168,7 +166,6 @@
    "role": "phd",
    "title": "Doctoral Student",
    "photo": "images/team/images.jpeg",
-   "email": "masroor.bashir@iiap.res.in",
    "research": "Cosmic Dipole Anomaly",
    "degree": "",
    "tags": [
@@ -185,7 +182,6 @@
    "role": "phd",
    "title": "Doctoral Student",
    "photo": "images/team/saurabh.jpg",
-   "email": "",
    "research": "",
    "degree": "",
    "tags": [],
@@ -200,7 +196,6 @@
    "role": "postdoc",
    "title": "Postdoctoral Researcher",
    "photo": "images/team/images.jpeg",
-   "email": "sandeep.acharya@iiap.res.in",
    "research": "Mass Function",
    "degree": "TIFR, Dept. of Theor. Physics (2020)",
    "tags": [
@@ -217,7 +212,6 @@
    "role": "postdoc",
    "title": "Postdoctoral Researcher",
    "photo": "images/team/manu.jpeg",
-   "email": "manosh.tm@iiap.res.in",
    "research": "Dark Energy Models, Non-extensive entropies",
    "degree": "CUSAT, Dept. of Physics (2025)",
    "tags": [
@@ -246,6 +240,20 @@
     }
    ],
    "pub_names": []
+  },
+  {
+   "name": "Fahmidha",
+   "role": "intern",
+   "title": "M.Sc.",
+   "photo": "images/team/fahmidha.png",
+   "research": "Statistical Analysis",
+   "degree": "",
+   "tags": [],
+   "bio": "",
+   "inspire": "",
+   "links": [],
+   "pub_names": [],
+   "id": "fahmidha"
   }
  ],
  "alumni": [
